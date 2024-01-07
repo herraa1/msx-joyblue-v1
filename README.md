@@ -56,7 +56,8 @@ The MSX joystick extension cable loose end is wired according to the following p
 
 ## [Firmware](https://github.com/ricardoquesada/bluepad32/tree/develop)
 
-The msx-joyblue v1 adapter firmware uses a [small modification](https://github.com/herraa1/bluepad32/commits/topic/develop-unijoysticle-msx/) of Ricardo Quesada [bluepad32](https://github.com/ricardoquesada/bluepad32/tree/develop) library to drive Bluetooth controllers.
+The msx-joyblue v1 adapter firmware uses Ricardo Quesada [bluepad32](https://github.com/ricardoquesada/bluepad32/tree/develop) library to drive Bluetooth controllers.
+A [small modification](https://github.com/ricardoquesada/bluepad32/commit/9736bd169bc13ec625d469b8305d2ed2f46d6e69) to the library that enables support for MSX computers has been already commited to the _develop_ branch.
 
 See [bluepad32 documentation](https://github.com/ricardoquesada/bluepad32/tree/main/docs) for [supported Bluetooth controllers](https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md).
 
