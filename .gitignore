@@ -24,3 +24,5 @@ fp-info-cache
 *.dsn
 *.ses
 
+gerbers/
+
