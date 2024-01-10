@@ -25,7 +25,7 @@ The main features of the msx-joyblue v1 adapter are:
 
 ## [Hardware](hardware/kicad/)
 
-The msx-joyblue v1 adapter uses an [ESP32-DevKitC-32E](https://www.espressif.com/en/products/devkits/esp32-devkitc) to convert the Bluetooth controller actions to the [MSX joystick standard signalling](https://www.msx.org/wiki/Joystick_control).
+The msx-joyblue v1 adapter uses an ESP32-WROOM-32E based development board (either a [ESP32-DevKitC-32E](https://www.espressif.com/en/products/devkits/esp32-devkitc) board or a [NodeMCU-32 V1.3](https://www.aliexpress.com/item/1005004858036658.html) board) to convert the Bluetooth controller actions to the [MSX joystick standard signalling](https://www.msx.org/wiki/Joystick_control).
 
 A printed circuit board (PCB) is used to easily bind all components:
 * The ESP32 is connected using female headers
