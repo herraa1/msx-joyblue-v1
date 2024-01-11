@@ -6,7 +6,8 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 
 > [!WARNING]
 > This is a work in progress project.
-> The firmware is working and a breadboard-based prototype has been validated, but no PCB has been built yet.
+> The firmware is working and a breadboard-based prototype has been validated.
+> A first PCB prototype batch has already been ordered. Waiting for PCB to arrive.
 
 ## Introduction
 
