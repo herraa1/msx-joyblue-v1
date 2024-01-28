@@ -111,6 +111,18 @@ In summary, we can use the following options to power the msx-joyblue adapter (f
   * turn on the J3 _JOY PWR_ switch
   * connect Port A or Port B to a MSX general purpose port
 
+## Compatibility Tests
+
+| **Model**                | **Adapter PCB v1a** |
+|--------------------------|---------------------|
+| Sony MSX HB-101P         |          OK         |
+| Sony MSX HB-501F         |          OK         |
+| Toshiba MSX HX-10        |          OK         |
+| Philips MSX2 VG-8235     |          OK         |
+| Panasonic MSX2+ FS-A1WSX |          OK         |
+| Omega MSX2+              |          OK         |
+| MSXVR                    |          OK         |
+
 ## References
 
 Ricardo Quesada bluepad32 library
