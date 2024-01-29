@@ -6,7 +6,9 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 
 > [!WARNING]
 > This is a work in progress project.
+>
 > An adapter based on PCB version 1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
+>
 > The proposed acrylic enclosure has NOT yet been built nor tested!
 
 ## Introduction
@@ -56,6 +58,12 @@ The MSX joystick extension cable loose end is wired according to the following p
 | 7            | White                  | TRIG2  |
 | 8            | Blue                   | STROBE |
 | 9            | Yellow                 | GND    |
+
+### Build1a
+
+|[<img src="images/msx-joyblue-v1-build1a.png" width="512"/>](images/msx-joyblue-v1-build1a.png)|
+|:--|
+|msx-joyblue-v1 Build1a without case|
 
 ## [Firmware](https://github.com/ricardoquesada/bluepad32/tree/develop)
 
