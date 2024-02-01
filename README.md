@@ -9,7 +9,8 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 >
 > An adapter based on PCB version 1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
 >
-> The proposed acrylic enclosure has NOT yet been built nor tested!
+> The proposed acrylic enclosure has been successfully built, but still requires some minor adjustments! Nearly there!
+>
 
 ## Introduction
 
@@ -71,6 +72,15 @@ The msx-joyblue v1 adapter firmware uses Ricardo Quesada [bluepad32](https://git
 A [small modification](https://github.com/ricardoquesada/bluepad32/commit/9736bd169bc13ec625d469b8305d2ed2f46d6e69) to the library that enables support for MSX computers has been already commited to the _develop_ branch.
 
 See [bluepad32 documentation](https://github.com/ricardoquesada/bluepad32/tree/main/docs) for [supported Bluetooth controllers](https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md).
+
+## [Enclosure](enclosure/)
+
+A simple acrylic enclosure is included (but do not laser cut it yet, it requires minor adjustments for the buttons cutout).
+
+|[<img src="images/msx-joyblue-v1-acrylic-case-first-build.png" width="512">](images/msx-joyblue-v1-acrylic-case-first-build.png)|
+|:--|
+|msx-joyblue-v1 Build1a inside case prototype|
+
 
 ## Powering the msx-joyblue adapter
 
