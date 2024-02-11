@@ -87,6 +87,10 @@ The Build2 adapter takes into account the MSX general purpose pin8 (OUT) signals
   
 This build uses discrete logic components to honor the pin8 signaling (a [74LS04 hex inverter](https://www.ti.com/lit/ds/symlink/sn74ls04.pdf) and three [74LS03 quad 2-input positive-nand gates with open collector outputs](https://www.ti.com/lit/ds/symlink/sn74ls03.pdf)) and uses open collector outputs which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
 
+|[<img src="images/msx-joyblue-v1-build2-render.png" width="300"/>](images/msx-joyblue-v1-build2-render.png)|
+|:--|
+|msx-joyblue-v1 Build2 render|
+
 ### Build3
 
 > [!WARNING]
@@ -95,6 +99,10 @@ This build uses discrete logic components to honor the pin8 signaling (a [74LS04
 The Build3 adapter takes into account the MSX general purpose pin8 (OUT) signals, exactly as described for Build2.
   
 This build uses GALs, instead of discrete logic components, to honor the pin8 signaling (two [ATF16V8B Electrically-Erasable Programmable Logic Device](https://ww1.microchip.com/downloads/en/devicedoc/atmel-0364-pld-atf16v8b-8bq-8bql-datasheet.pdf)) and uses open collector outputs which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
+
+|[<img src="images/msx-joyblue-v1-build3-render.png" width="300"/>](images/msx-joyblue-v1-build3-render.png)|
+|:--|
+|msx-joyblue-v1 Build3 render|
 
 ## [Firmware](https://github.com/ricardoquesada/bluepad32/tree/develop)
 
