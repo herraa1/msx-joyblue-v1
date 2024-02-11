@@ -9,7 +9,7 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 >
 > An adapter based on PCB version 1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
 >
-> The proposed acrylic enclosure has been successfully built, but still requires some minor adjustments! Nearly there!
+> The proposed acrylic enclosure with the latest modifications has NOT yet been tested! Nearly there!
 >
 
 ## Introduction
