@@ -1,0 +1,57 @@
+%SIGNAL
+PIN   4 =  GPIO_JOY_DOWN 
+PIN   3 =  GPIO_JOY_LEFT 
+PIN   2 =  GPIO_JOY_RIGHT 
+PIN   7 =  GPIO_JOY_TRIGA 
+PIN   6 =  GPIO_JOY_TRIGB 
+PIN   5 =  GPIO_JOY_UP 
+PIN  17 =  JOY_DOWN 
+PIN  18 =  JOY_LEFT 
+PIN   8 =  JOY_OUT 
+PIN  19 =  JOY_RIGHT 
+PIN  14 =  JOY_TRIGA 
+PIN  15 =  JOY_TRIGB 
+PIN  16 =  JOY_UP 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+JOY_DOWN =>
+    0 
+
+JOY_DOWN.oe  =>
+    GPIO_JOY_DOWN & !JOY_OUT
+
+JOY_LEFT =>
+    0 
+
+JOY_LEFT.oe  =>
+    GPIO_JOY_LEFT & !JOY_OUT
+
+JOY_RIGHT =>
+    0 
+
+JOY_RIGHT.oe  =>
+    GPIO_JOY_RIGHT & !JOY_OUT
+
+JOY_TRIGA =>
+    0 
+
+JOY_TRIGA.oe  =>
+    GPIO_JOY_TRIGA & !JOY_OUT
+
+JOY_TRIGB =>
+    0 
+
+JOY_TRIGB.oe  =>
+    GPIO_JOY_TRIGB & !JOY_OUT
+
+JOY_UP =>
+    0 
+
+JOY_UP.oe  =>
+    GPIO_JOY_UP & !JOY_OUT
+
+%END

@@ -1,0 +1,49 @@
+Name	JOYSIG ;
+Partno	JOYSIG1 ;
+Date	10/02/24 ;
+Revision	1 ;
+Designer	herraa1 ;
+Company	herraa1 ;
+Assembly msx-joyblue ;
+Location 	U6 ;
+Format 	j ;
+Device 	g16v8a ;
+
+/* Inputs */
+PIN 2 = GPIO_JOY_RIGHT ;
+PIN 3 = GPIO_JOY_LEFT ;
+PIN 4 = GPIO_JOY_DOWN ;
+PIN 5 = GPIO_JOY_UP ;
+PIN 6 = GPIO_JOY_TRIGB ;
+PIN 7 = GPIO_JOY_TRIGA ;
+PIN 8 = JOY_OUT ;
+
+/* Outputs */
+PIN 19 = JOY_RIGHT ;
+PIN 18 = JOY_LEFT ;
+PIN 17 = JOY_DOWN ;
+PIN 16 = JOY_UP ;
+PIN 15 = JOY_TRIGB ;
+PIN 14 = JOY_TRIGA ;
+
+$DEFINE		ON	'b'0
+$DEFINE		OFF	'b'1
+
+/* Equations */
+JOY_UP = ON ;
+JOY_UP.OE = !JOY_OUT & GPIO_JOY_UP ;
+
+JOY_DOWN = ON ;
+JOY_DOWN.OE = !JOY_OUT & GPIO_JOY_DOWN ;
+
+JOY_LEFT = ON ;
+JOY_LEFT.OE = !JOY_OUT & GPIO_JOY_LEFT ;
+
+JOY_RIGHT = ON ;
+JOY_RIGHT.OE = !JOY_OUT & GPIO_JOY_RIGHT ;
+
+JOY_TRIGA = ON ;
+JOY_TRIGA.OE = !JOY_OUT & GPIO_JOY_TRIGA ;
+
+JOY_TRIGB = ON ;
+JOY_TRIGB.OE = !JOY_OUT & GPIO_JOY_TRIGB ;

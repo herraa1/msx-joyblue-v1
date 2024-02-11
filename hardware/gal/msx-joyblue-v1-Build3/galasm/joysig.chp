@@ -1,0 +1,25 @@
+
+
+                                GAL16V8
+
+                          -------\___/-------
+                       NC |  1           20 | VCC
+                          |                 |
+                    GPJRI |  2           19 | JRI
+                          |                 |
+                    GPJLE |  3           18 | JLE
+                          |                 |
+                    GPJDO |  4           17 | JDO
+                          |                 |
+                    GPJUP |  5           16 | JUP
+                          |                 |
+                    GPJTB |  6           15 | JTB
+                          |                 |
+                    GPJTA |  7           14 | JTA
+                          |                 |
+                     JOUT |  8           13 | NC
+                          |                 |
+                       NC |  9           12 | NC
+                          |                 |
+                      GND | 10           11 | NC
+                          -------------------

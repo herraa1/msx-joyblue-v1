@@ -1,0 +1,22 @@
+Name     	JOYSIG;
+PartNo   	JOYSIG1;
+Date     	10/02/24;
+Revision 	1;
+Designer 	herraa1;
+Company  	herraa1;
+Assembly msx-joyblue;
+Location 	U6;
+Device   	g16v8a;
+
+
+ORDER: GPIO_JOY_DOWN, GPIO_JOY_UP, JOY_OUT, JOY_UP, JOY_DOWN; 
+
+
+VECTORS:
+100ZL
+010LZ
+101ZZ
+011ZZ
+100ZL
+010LZ
+101ZZ

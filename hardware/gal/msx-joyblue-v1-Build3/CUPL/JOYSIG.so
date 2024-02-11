@@ -1,0 +1,44 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Feb 10 19:22:06 2024
+
+LISTING FOR SIMULATION FILE: JOYSIG.si
+
+   1: Name     	JOYSIG;
+   2: PartNo   	JOYSIG1;
+   3: Date     	10/02/24;
+   4: Revision 	1;
+   5: Designer 	herraa1;
+   6: Company  	herraa1;
+   7: Assembly msx-joyblue;
+   8: Location 	U6;
+   9: Device   	g16v8a;
+  10: 
+  11: 
+  12: ORDER: GPIO_JOY_DOWN, GPIO_JOY_UP, JOY_OUT, JOY_UP, JOY_DOWN; 
+  13: 
+  14: 
+
+==============
+      G       
+      P       
+      IG      
+      OP      
+      _I      
+      JO  J   
+      O_J O   
+      YJOJY   
+      _OYO_   
+      DY_YD   
+      O_O_O   
+      WUUUW   
+      NPTPN   
+==============
+0001: 100ZL
+0002: 010LZ
+0003: 101ZZ
+0004: 011ZZ
+0005: 100ZL
+0006: 010LZ
+0007: 101ZZ

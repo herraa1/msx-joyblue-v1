@@ -1,0 +1,163 @@
+{COMPONENT Z:\HOME\ALBERT\DOCUMENTS\02-PROJECTS\MSX-JOYBLUE\MSX-JOYBLUE-V3\HARDWARE\GAL\JOYSIG.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Sat Feb 10 19:22:04 2024 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P GPIO_J {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P GPIO_JO {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P GPIO_JOY {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P GPIO_ {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P GPIO_J2 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P GPIO_J1 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P JOY_OUT {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P JOY_TR1 {Pt "I/O"}{Lq 0}{Ploc 360 20}}
+   {P JOY_TR2 {Pt "I/O"}{Lq 0}{Ploc 360 40}}
+   {P JOY_UP {Pt "I/O"}{Lq 0}{Ploc 360 60}}
+   {P JOY_DOWN {Pt "I/O"}{Lq 0}{Ploc 360 80}}
+   {P JOY_LEFT {Pt "I/O"}{Lq 0}{Ploc 360 100}}
+   {P JOY_RIGH {Pt "I/O"}{Lq 0}{Ploc 360 120}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 230 170}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 340 30}
+   {Pnl 340 50}
+   {Pnl 340 70}
+   {Pnl 340 90}
+   {Pnl 340 110}
+   {Pnl 340 130}
+
+   {Sd A 2 3 4 5 6 7 8 14 15 16 17 18 19}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 160 330 0}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 330 20 360 20}
+   {L 330 40 360 40}
+   {L 330 60 360 60}
+   {L 330 80 360 80}
+   {L 330 100 360 100}
+   {L 330 120 360 120}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "GPIO_J" 140 140}
+   {T "GPIO_JO" 140 120}
+   {T "GPIO_JOY" 140 100}
+   {T "GPIO_" 140 80}
+   {T "GPIO_J2" 140 60}
+   {T "GPIO_J1" 140 40}
+   {T "JOY_OUT" 140 20}
+   [Tj "RC"]
+   {T "JOY_TR1" 320 20}
+   {T "JOY_TR2" 320 40}
+   {T "JOY_UP" 320 60}
+   {T "JOY_DOWN" 320 80}
+   {T "JOY_LEFT" 320 100}
+   {T "JOY_RIGH" 320 120}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8MA" 230 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD Z:\HOME\ALBERT\DOCUMENTS\02-PROJECTS\MSX-JOYBLUE\MSX-JOYBLUE-V3\HARDWARE\GAL\JOYSIG 230 160}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N GPIO_J
+   }
+   {N GPIO_JO
+   }
+   {N GPIO_JOY
+   }
+   {N GPIO_
+   }
+   {N GPIO_J2
+   }
+   {N GPIO_J1
+   }
+   {N JOY_OUT
+   }
+   {N JOY_TR1
+   }
+   {N JOY_TR2
+   }
+   {N JOY_UP
+   }
+   {N JOY_DOWN
+   }
+   {N JOY_LEFT
+   }
+   {N JOY_RIGH
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

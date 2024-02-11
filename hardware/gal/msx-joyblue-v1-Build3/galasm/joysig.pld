@@ -1,0 +1,50 @@
+GAL16V8
+JOYSIG
+
+;  1  2  3  4  5  6  7  8  9 10
+NC GPJRI GPJLE GPJDO GPJUP GPJTB GPJTA JOUT NC  GND
+; 11 12 13 14 15 16 17 18 19 20
+NC NC    NC    JTA   JTB   JUP   JDO   JLE  JRI VCC
+
+JUP.T = GND
+JUP.E = /JOUT * GPJUP
+
+JDO.T = GND
+JDO.E = /JOUT * GPJDO
+
+JLE.T = GND
+JLE.E = /JOUT * GPJLE
+
+JRI.T = GND
+JRI.E = /JOUT * GPJRI
+
+JTA.T = GND
+JTA.E = /JOUT * GPJTA
+
+JTB.T = GND
+JTB.E = /JOUT * GPJTB
+
+DESCRIPTION
+
+ESP32 control signals (active high)
+GPJUP = GPIO_JOY_UP
+GPJDO = GPIO_JOY_DOWN
+GPJLE = GPIO_JOY_LEFT
+GPJRI = GPIO_JOY_RIGHT
+GPJTA = GPIO_JOY_TRIGA
+GPJTB = GPIO_JOY_TRIGB
+
+MSX joystick signals (active low)
+JUP = JOY_UP    (PIN1)
+JDO = JOY_DOWN  (PIN2)
+JLE = JOY_LEFT  (PIN3)
+JRI = JOY_RIGHT (PIN4)
+JTA = JOY_TRIGA (PIN6)
+JTB = JOY_TRIGB (PIN7)
+JOU = JOY_OUT   (PIN8)
+
+When MSX DE9 PIN8 (JOU) is HIGH all signals must be in high-impedance (Z).
+Only when PIN8 is LOW and a signal is HIGH, then the signal must
+be pulled to GND to tell the PSG that the corresponding arrow/button
+is hold.
+

@@ -1,0 +1,22 @@
+#WAVEFORM
+#H Name     	JOYSIG;
+#H PartNo   	JOYSIG1;
+#H Date     	10/02/24;
+#H Revision 	1;
+#H Designer 	herraa1;
+#H Company  	herraa1;
+#H Assembly msx-joyblue;
+#H Location 	U6;
+#H Device   	g16v8a;
+#H 
+#H 
+#H ORDER: GPIO_JOY_DOWN, GPIO_JOY_UP, JOY_OUT, JOY_UP, JOY_DOWN; 
+#H 
+#H 
+#V 0001 100ZL
+#V 0002 010LZ
+#V 0003 101ZZ
+#V 0004 011ZZ
+#V 0005 100ZL
+#V 0006 010LZ
+#V 0007 101ZZ
