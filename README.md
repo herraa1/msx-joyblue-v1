@@ -7,7 +7,8 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 > [!WARNING]
 > This is a work in progress project.
 >
-> An adapter based on PCB version 1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
+> An adapter based on PCB v1 Build1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
+> Adapter v1 Build2 has NOT yet been build!
 >
 > The proposed acrylic enclosure with the latest modifications has NOT yet been tested! Nearly there!
 >
@@ -69,6 +70,19 @@ This build uses open collector outputs (via [74LS05 hex inverters with open coll
 |[<img src="images/msx-joyblue-v1-build1a.png" width="512"/>](images/msx-joyblue-v1-build1a.png)|
 |:--|
 |msx-joyblue-v1 Build1a without case|
+
+### Build2
+
+> [!WARNING]
+> Build2 has NOT yet been tested!
+
+The Build2 adapter takes into account the MSX general purpose pin8 (OUT) signals:
+* When pin8 is HIGH, the adapter puts joystick signals in high impedance mode irrespective of their status (as if arrows/buttons were not hold in the standard MSX joystick schematic), which become HIGH on the MSX side via the MSX PSG related circuitry pull-ups (matching the pin8 signaling)
+* When pin8 is LOW
+  * if an arrow/button is hold, the corresponding signal is pulled down to GND (matching the pin8 signaling)
+  * if an arrow/button is not hold, the corresponding signal is put in high impedance mode, which becomes HIGH on the MSX side via the MSX PSG related circuitry pull-ups (matching the pin8 signaling)
+  
+This build uses discrete logic components to honor the pin8 signaling (a [74LS04 hex inverter](https://www.ti.com/lit/ds/symlink/sn74ls04.pdf) and three [74LS03 quad 2-input positive-nand gates with open collector outputs](https://www.ti.com/lit/ds/symlink/sn74ls03.pdf)) and uses open collector outputs which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
 
 ## [Firmware](https://github.com/ricardoquesada/bluepad32/tree/develop)
 
