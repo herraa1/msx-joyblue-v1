@@ -60,7 +60,11 @@ The MSX joystick extension cable loose end is wired according to the following p
 | 8            | Blue                   | STROBE |
 | 9            | Yellow                 | GND    |
 
-### Build1a
+### Build1
+
+The Build1 adapter ignores the MSX general purpose pin8 (OUT) signal. This is not a problem in general, but can cause incompatibilities with specific software, like MSX-HID [^2], which uses pin8 to try to guess which kind of device is connected to a MSX general purpose port. For MSX-HID, holding the Trigger B button, will put the software in FM-Towns compatible mode which will make the adapter functional.
+
+This build uses open collector outputs (via [74LS05 hex inverters with open collector outputs](https://www.ti.com/lit/ds/symlink/sn7405.pdf)) which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
 
 |[<img src="images/msx-joyblue-v1-build1a.png" width="512"/>](images/msx-joyblue-v1-build1a.png)|
 |:--|
@@ -131,15 +135,15 @@ In summary, we can use the following options to power the msx-joyblue adapter (f
 
 ## Compatibility Tests
 
-| **Model**                | **Adapter PCB v1a** |
-|--------------------------|---------------------|
-| Sony MSX HB-101P         |          OK         |
-| Sony MSX HB-501F         |          OK         |
-| Toshiba MSX HX-10        |          OK         |
-| Philips MSX2 VG-8235     |          OK         |
-| Panasonic MSX2+ FS-A1WSX |          OK         |
-| Omega MSX2+              |          OK         |
-| MSXVR                    |          OK         |
+| **Model**                | **Adapter PCB v1 Build1a** |
+|--------------------------|----------------------------|
+| Sony MSX HB-101P         |          OK                |
+| Sony MSX HB-501F         |          OK                |
+| Toshiba MSX HX-10        |          OK                |
+| Philips MSX2 VG-8235     |          OK                |
+| Panasonic MSX2+ FS-A1WSX |          OK                |
+| Omega MSX2+              |          OK                |
+| MSXVR                    |          OK                |
 
 ## References
 
@@ -153,6 +157,8 @@ MSX General Purpose port
 * https://www.msx.org/wiki/General_Purpose_port
 
 [^1]: https://www.msx.org/wiki/General_Purpose_port
+[^2]: https://www.msx.org/wiki/MSX-HID
+[^3]: https://www.msx.org/wiki/Joystick/joypad_controller (see "Undesired Conditions")
 
 ## Image Sources
 
