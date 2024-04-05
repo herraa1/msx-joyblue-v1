@@ -4,14 +4,13 @@
 
 Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 
-> [!WARNING]
-> This is a work in progress project.
+> [!NOTE]
 >
-> An adapter based on PCB v1 Build1a has been successfully built and tested using the bluepad32 firmware (develop branch)!
+> An adapter based on PCB v1 Build1a has been successfully built and tested using the bluepad32 firmware!
 >
-> Adapter v1 Build2 has NOT yet been build!
+> Adapter v1 Build2b has NOT yet been build, although I may build it in the future.
 >
-> Adapter v1 Build3 has NOT yet been build!
+> The other builds will NOT be built, and are just left for reference.
 >
 > The proposed acrylic enclosure with the latest modifications has NOT yet been tested! Nearly there!
 >
@@ -94,7 +93,7 @@ This build uses discrete logic components to honor the pin8 signaling (a [74LS04
 ### Build2b
 
 > [!WARNING]
-> Build2b has NOT yet been tested!
+> Build2b has NOT yet been tested! Use at your own risk!
 
 The Build2b is similar to Build2 but simplifies the BOM by using less different components.
  
@@ -107,7 +106,7 @@ This build uses discrete logic components to honor the pin8 signaling (four [74L
 ### Build3
 
 > [!WARNING]
-> Build3 has NOT yet been tested!
+> Build3 will not be finally built! Use at your own risk!
 
 The Build3 adapter takes into account the MSX general purpose pin8 (OUT) signal, and produces outputs exactly as described for Build2.
   
@@ -119,8 +118,8 @@ This build uses GALs, instead of discrete logic components, to honor the pin8 si
 
 ## [Firmware](https://github.com/ricardoquesada/bluepad32/tree/develop)
 
-The msx-joyblue v1 adapter firmware uses Ricardo Quesada [bluepad32](https://github.com/ricardoquesada/bluepad32/tree/develop) library to drive Bluetooth controllers.
-A [small modification](https://github.com/ricardoquesada/bluepad32/commit/9736bd169bc13ec625d469b8305d2ed2f46d6e69) to the library that enables support for MSX computers has been already commited to the _develop_ branch.
+The msx-joyblue v1 adapter firmware uses Ricardo Quesada [bluepad32](https://github.com/ricardoquesada/bluepad32/tree/main) library to drive Bluetooth controllers.
+A [small modification](https://github.com/ricardoquesada/bluepad32/commit/9736bd169bc13ec625d469b8305d2ed2f46d6e69) to the library that enables support for MSX computers was commited to the _develop_ branch. The _main_ branch carries too the modification since February 2024.
 
 See [bluepad32 documentation](https://github.com/ricardoquesada/bluepad32/tree/main/docs) for [supported Bluetooth controllers](https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md).
 
