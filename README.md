@@ -63,9 +63,11 @@ The MSX joystick extension cable loose end is wired according to the following p
 | 8            | Blue                   | STROBE |
 | 9            | Yellow                 | GND    |
 
-### Build1
+### Build1a
 
-The Build1 adapter ignores the MSX general purpose pin8 (OUT) signal. This is not a problem in general, but can cause incompatibilities with specific software, like MSX-HID [^2], which uses pin8 to try to guess which kind of device is connected to a MSX general purpose port. For MSX-HID, holding the Trigger B button, will put the software in FM-Towns compatible mode which will make the adapter functional.
+[Bill Of Materials (BoM)](https://html-preview.github.io/?url=https://raw.githubusercontent.com/herraa1/msx-joyblue-v1/main/hardware/kicad/msx-joyblue-v1/bom/ibom.html)
+
+The Build1a adapter ignores the MSX general purpose pin8 (OUT) signal. This is not a problem in general, but can cause incompatibilities with specific software, like MSX-HID [^2], which uses pin8 to try to guess which kind of device is connected to a MSX general purpose port. For MSX-HID, holding the Trigger B button, will put the software in FM-Towns compatible mode which will make the adapter functional.
 
 This build uses open collector outputs (via [74LS05 hex inverters with open collector outputs](https://www.ti.com/lit/ds/symlink/sn7405.pdf)) which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
 
