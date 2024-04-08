@@ -15,6 +15,8 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 > The proposed acrylic enclosure with the latest modifications has NOT yet been tested! Nearly there!
 >
 
+For an upgraded SMD version, please visit [msx-joyblue-v2](https://github.com/herraa1/msx-joyblue-v2).
+
 ## Introduction
 
 The msx-joyblue is an adapter that allows connecting Bluetooth controllers to [MSX general purpose ports](https://www.msx.org/wiki/General_Purpose_port).
