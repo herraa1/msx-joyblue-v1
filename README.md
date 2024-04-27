@@ -8,11 +8,9 @@ Connect Bluetooth controllers to [MSX computers](https://www.msx.org/wiki/)
 >
 > An adapter based on PCB v1 Build1a has been successfully built and tested using the bluepad32 firmware!
 >
-> Adapter v1 Build2b has NOT yet been build, although I may build it in the future.
+> Adapter v1 Build2b has NOT yet been built, although I may build it in the future.
 >
 > The other builds will NOT be built, and are just left for reference.
->
-> The proposed acrylic enclosure with the latest modifications has NOT yet been tested! Nearly there!
 >
 
 For an upgraded SMD version, please visit [msx-joyblue-v2](https://github.com/herraa1/msx-joyblue-v2).
@@ -80,13 +78,15 @@ This build uses open collector outputs (via [74LS05 hex inverters with open coll
 ### Build2 (deprecated)
 
 > [!WARNING]
+> Build2 will not be finally built! Use at your own risk!
+>
 > Build2 has been superseded by Build2b.
 
 The Build2 adapter takes into account the MSX general purpose pin8 (OUT) signal:
 * When pin8 is HIGH, the adapter puts all stick and triggers signals in high impedance mode irrespective of their status (as if stick and triggers were not hold in the standard MSX joystick schematic), which become HIGH on the MSX side via the MSX PSG related circuitry pull-ups (matching the expected behavior)
 * When pin8 is LOW
   * if a stick direction or trigger is hold, the corresponding signal is pulled down to GND causing it to be LOW (matching the expected behavior)
-  * if a stick direction or trigger is not hold, the corresponding signal is put in high impedance mode, which becomes HIGH on the MSX side via the MSX PSG related circuitry pull-ups (matching the expected behaviour)
+  * if a stick direction or trigger is not hold, the corresponding signal is put in high impedance mode, which becomes HIGH on the MSX side via the MSX PSG related circuitry pull-ups (matching the expected behavior)
   
 This build uses discrete logic components to honor the pin8 signaling (a [74LS04 hex inverter](https://www.ti.com/lit/ds/symlink/sn74ls04.pdf) and three [74LS03 quad 2-input positive-nand gates with open collector outputs](https://www.ti.com/lit/ds/symlink/sn74ls03.pdf)) and uses open collector outputs which makes the adapter safer [^3] than the standard MSX joystick schematic depicted in the MSX Technical Data Book, as it avoids a series of undesired conditions that can lead to bus contention/short circuits.
 
@@ -125,15 +125,15 @@ This build uses GALs, instead of discrete logic components, to honor the pin8 si
 The msx-joyblue v1 adapter firmware uses Ricardo Quesada [bluepad32](https://github.com/ricardoquesada/bluepad32/tree/main) library to drive Bluetooth controllers.
 A [small modification](https://github.com/ricardoquesada/bluepad32/commit/9736bd169bc13ec625d469b8305d2ed2f46d6e69) to the library that enables support for MSX computers was commited to the _develop_ branch. The _main_ branch carries too the modification since February 2024.
 
-See [bluepad32 documentation](https://github.com/ricardoquesada/bluepad32/tree/main/docs) for [supported Bluetooth controllers](https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md).
+See the [bluepad32 documentation](https://github.com/ricardoquesada/bluepad32/tree/main/docs) for [supported Bluetooth controllers](https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md).
 
 ## [Enclosure](enclosure/)
 
-A simple acrylic enclosure is included (but do not laser cut it yet, it requires minor adjustments for the buttons cutout).
+A simple acrylic enclosure is included.
 
-|[<img src="images/msx-joyblue-v1-acrylic-case-first-build.png" width="512">](images/msx-joyblue-v1-acrylic-case-first-build.png)|
+|[<img src="images/msx-joyblue-v1-acrylic-case-tested.png" width="512">](images/msx-joyblue-v1-acrylic-case-tested.png)|
 |:--|
-|msx-joyblue-v1 Build1a inside case prototype|
+|msx-joyblue-v1 Build1a inside tested case prototype|
 
 
 ## Powering the msx-joyblue adapter
@@ -155,7 +155,7 @@ To enable powering the msx-joyblue adapter from port A and/or port B, the switch
 
 To power the msx-joyblue adapter using the MSX general purpose ports we must first understand how the PTC protections on the msx-joyblue adapter are implemented.
 
-The selected PTCs are rated for 50mA which is the so called Hold Current (the maximum current that can flow in normal operation). There is also the Trip Current (the minimum current necessary for the PTC to move to high-resistance state) which for the selected PTCs is around 100mA. Those thresholds are dependent on temperature and voltage. And to make things more undeterministic, the behaviour of the PTC when current is between those thresholds is undefined (it may trip or not).
+The selected PTCs are rated for 50mA which is the so called Hold Current (the maximum current that can flow in normal operation). There is also the Trip Current (the minimum current necessary for the PTC to move to high-resistance state) which for the selected PTCs is around 100mA. Those thresholds are dependent on temperature and voltage. And to make things more undeterministic, the behavior of the PTC when current is between those thresholds is undefined (it may trip or not).
 
 In normal operation and for a room temperature of around 25 degrees Celsius, the selected PTCs in practice never trip below 75mA.
 
